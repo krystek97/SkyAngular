@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-kurs';
-  inputText = 'Wpisz tekst' ;
   colorClass = 'color2' ;
   logoUrl = 'http://www.drewnianyteatrzyk.pl/environment/cache/images/500_500_productGfx_5408d3e5a551a0e08d115f05a1ff71c6.jpg' ;
   MaxLength = 6 ;
@@ -19,3 +18,5 @@ export class AppComponent {
     this.logoUrl = 'https://cygnus.org.pl/wp-content/uploads/2016/12/swan-water-bird-nature-water-57431.jpeg' ;
   }
 }
+
+
