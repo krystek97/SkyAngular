@@ -1,9 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<h1 [className]="colorClass">
-  Witaj na stronie
-</h1>
-<img [src]="logoUrl" [className] = "imageClass">
-<br>
-<input [maxLength]="MaxLength" [value] = "value">
-<button (click)="change()">Add</button>
+<h3>Wlasnie przeczytalem {{pages}} stron ksiazki {{book}}</h3>
+<label>Ksiazka</label>
+<input [value]="book" (input)="saveK($event)">
+<label>Przeczytane Strony</label>
+<input [value]="pages" (input) = "saveP($event)">
+
+
 
