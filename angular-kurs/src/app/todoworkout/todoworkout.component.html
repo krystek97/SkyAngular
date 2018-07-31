@@ -1,0 +1,13 @@
+<ng-container *ngIf="workoutsList.length >0 ; else noWorkout">
+    <ul>
+      <li *ngFor="let workout of workoutsList">
+        {{workout}}
+        <button (click) = "remove(workout)">Usuń</button>
+        <button (click) = "save(workout)">Zrobione</button>
+      </li>
+    </ul>
+  </ng-container>
+  <ng-template #noWorkout>
+      <p>Brak cwiczen do wykonania</p>
+  </ng-template>
+

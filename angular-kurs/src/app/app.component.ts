@@ -6,12 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  book = 'Wpisz nazwe ksiazki' ;
-  pages = 'Wpisz ilosc stron' ;
-  saveK(event) {
-    this.book = event.target.value ; }
-  saveP(event) {
-    this.pages = event.target.value ; }
+  workoutsList: Array<string> = [] ;
+  workoutsaveList: Array<string> = [] ;
+  add(workout: string) {
+    this.workoutsList.push(workout) ;
+  }
+  remove(workout: string) {
+    this.workoutsList = this.workoutsList.filter(e => e !== workout) ;
+  }
+  save(workout: string) {
+    this.workoutsaveList.push(workout) ;
+    this.remove(workout) ;
+  }
 }
+
 
 

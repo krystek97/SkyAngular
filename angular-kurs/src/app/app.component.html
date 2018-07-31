@@ -1,9 +1,17 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<h3>Wlasnie przeczytalem {{pages}} stron ksiazki {{book}}</h3>
-<label>Ksiazka</label>
-<input [value]="book" (input)="saveK($event)">
-<label>Przeczytane Strony</label>
-<input [value]="pages" (input) = "saveP($event)">
-
+<div class = "container">
+    <div>
+     <app-addworkout (emitWorkout)="add($event)"></app-addworkout>
+    </div>
+    <div class="container">
+      <div>
+          <app-todoworkout [workoutsList]="workoutsList" (emitSave)="save($event)"
+          (emitRemove)="remove($event)"></app-todoworkout>
+      </div>
+    </div>
+    <div class = "container">
+      <app-savetask [workoutsaveList]="workoutsaveList"></app-savetask>
+    </div>
+  </div>
 
 

@@ -1,15 +1,5 @@
-.color2
+.container
 {
-  color: green ;
-}
-
-.angularimage
-{
-  width : 200px ;
-  height : 200px ;
-}
-
-.color
-{
-  color: red ;
+  display: flex ;
+  justify-content: space-around ;
 }
