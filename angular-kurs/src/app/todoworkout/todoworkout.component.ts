@@ -8,7 +8,7 @@ import { Component, OnInit ,Input, Output ,EventEmitter } from '@angular/core';
 export class TodoworkoutComponent implements OnInit {
   @Input()
   workoutsList = [] ;
-  constructor() { }
+  constructor() {    }
   @Output() emitSave = new EventEmitter<string>() ;
   @Output() emitRemove = new EventEmitter<string>() ;
   ngOnInit() {
