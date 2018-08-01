@@ -1,6 +1,8 @@
 <ng-container *ngIf="workoutsList.length >0 ; else noWorkout">
-    <ul>
-      <li *ngFor="let workout of workoutsList">
+  <p [ngStyle]="{color: getColor()}">Ćwiczenia do wykonania : {{workoutsList.length}}</p>
+  <ul>
+      <li *ngFor="let workout of workoutsList ; let odd = odd" [ngClass]="{'odd-li' : odd===true ,
+      'last-li' : workoutsList.length === 1}">
         {{workout}}
         <button (click) = "remove(workout)">Usuń</button>
         <button (click) = "save(workout)">Zrobione</button>
