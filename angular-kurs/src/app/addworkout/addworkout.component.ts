@@ -7,11 +7,14 @@ import { Component, OnInit , Output , EventEmitter } from '@angular/core';
 export class AddworkoutComponent implements OnInit {
 
   newWorkout: string ;
+  series: number ;
   @Output()
   emitWorkout = new EventEmitter<string>() ;
-  add() {
+  add(series: number) {
     this.emitWorkout.emit(this.newWorkout) ;
     this.newWorkout = '' ;
+    this.series = series * 6 ;
+    console.log(series) ;
   }
 
   constructor() { }
